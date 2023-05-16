@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Css-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Document</title>
+</head>
+<body class="bg-secondary-subtle">
+    <nav class="navbar bg-dark" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">FlyNow</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header
+      class="container-fluid p-5 text-center d-flex flex-column align-items-center gap-4"
+    >
+      <h1 class="fw-normal">¿A dónde quieres ir?</h1>
+      <p>
+        Estás a sólo unos pasos de estar en el destino de tus sueños para tus
+        vacaciones. A continuación cuéntanos a dónde quiere ir.
+      </p>
+
+      <div class="datos-viaje container">
+        <div class="row g-4">
+          <div
+            class="col col-12 col-md-6 d-flex flex-column align-items-center justify-content-center gap-1"
+          >
+            <label for="selectOrigen">Origen:</label>
+            <select
+              class="form-select"
+              aria-label="Origen"
+              id="selectOrigen"
+              onchange="actualizarData('selectOrigen', 'displayOrigen')"
+            ></select>
+            <input
+              class="form-control"
+              type="date"
+              name="dia-origen"
+              id="selectFechaOrigen"
+              onchange="actualizarData('selectFechaOrigen', 'badgeOrigen')"
+            />
+          </div>
+
+          <div
+            class="col col-12 col-md-6 d-flex flex-column align-items-center justify-content-center gap-1"
+          >
+            <label for="selectDestino">Destino:</label>
+            <select
+              class="form-select"
+              aria-label="Destino"
+              id="selectDestino"
+              onchange="actualizarData('selectDestino', 'displayDestino')"
+            ></select>
+            <input
+              class="form-control"
+              type="date"
+              name="dia-detino"
+              id="selectFechaDestino"
+              onchange="actualizarData('selectFechaDestino', 'badgeDestino')"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="row bg-white m-3 rounded-2 p-3">
+      <h2 class="fs-1 fw-semibold text-center">Itinerario</h2>
+
+      <hr />
+
+      <div class="row">
+        <div class="col d-flex flex-column align-items-center">
+          <span
+            class="badge bg-primary-subtle text-primary rounded-1"
+            id="badgeOrigen"
+          ></span>
+          <p class="fw-semibold" id="displayOrigen">Origen</p>
+          <button class="btn btn-primary btn-sm">Ver más información</button>
+        </div>
+
+        <div class="col d-flex flex-column align-items-center">
+          <div class="deco-line"></div>
+          <p class="fw-semibold text-center" id="escala"></p>
+        </div>
+
+        <div class="col d-flex flex-column align-items-center">
+          <span
+            class="badge bg-success-subtle text-success rounded-1"
+            id="badgeDestino"
+          ></span>
+          <p class="fw-semibold" id="displayDestino">Destino</p>
+          <button class="btn btn-primary btn-sm">Ver más información</button>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"></script>
+
+
+    
+    <!--Js-->
+    <script src="assets/js/script.js"></script>
+    <!--Bootstrap Js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

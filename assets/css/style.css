@@ -1,0 +1,36 @@
+.badge {
+    height: 1.5rem !important;
+    transform: translateY(-0.75rem);
+    position: relative;
+  }
+  
+  .badge::after {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 1rem;
+    top: 100%;
+    left: 0%;
+    border-right: 1px dashed #c7c8c9;
+  }
+  
+  .deco-line {
+    border-right: 1px dashed #c7c8c9;
+  
+    height: 2.2rem;
+    width: 50%;
+    align-self: flex-start;
+    margin: 1rem 0;
+  }
+  
+  hr {
+    margin-bottom: 0 !important;
+  }
+  
+  /* queries */
+  
+  @media screen and (min-width: 800px) {
+    header > p {
+      width: 50% !important;
+    }
+  }
